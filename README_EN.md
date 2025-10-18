@@ -26,7 +26,7 @@ An AI-powered intelligent recipe generation platform supporting Chinese Eight Gr
 -   **Frontend Framework:** Vue 3.4 + Composition API + TypeScript 5.3+
 -   **Styling:** Tailwind CSS 3.4+
 -   **Build Tool:** Vite 5.0+
--   **AI Services:** Yi-Lightning (01.AI) + CogView-3-Flash (Zhipu AI)
+-   **AI Services:** 302.AI
 -   **Deployment:** Vercel + Netlify
 
 ## 🚀 Quick Start
@@ -82,17 +82,19 @@ npm run preview
 
 #### You can switch any request address and model that complies with the OpenAI standard
 
-> **🚀 Recommended Provider**: This project recommends using [302.ai](https://302.ai/) AI API services - stable, reliable, supports multiple mainstream large models, and cost-effective!
+> **🚀 Recommended Provider**: This project recommends using [302.AI](https://share.302.AI/DymMSI) AI API services - stable, reliable, supports multiple mainstream large models, and cost-effective!
 
 ```env
 # Text Generation API (lingyiwanwu.AI)
-VITE_TEXT_GENERATION_BASE_URL=https://api.lingyiwanwu.com/v1/
-VITE_TEXT_GENERATION_API_KEY=your_text_api_key_here
-VITE_TEXT_GENERATION_MODEL=yi-lightning
+VITE_TEXT_GENERATION_BASE_URL=https://api.302ai.cn/v1/
+VITE_TEXT_GENERATION_API_KEY=************
+VITE_TEXT_GENERATION_MODEL=doubao-1.5-pro-32k
+VITE_TEXT_GENERATION_TEMPERATURE=0.7
+VITE_TEXT_GENERATION_TIMEOUT=300000
 
 # Image Generation API (Zhipu AI)
-VITE_IMAGE_GENERATION_BASE_URL=https://open.bigmodel.cn/api/paas/v4/
-VITE_IMAGE_GENERATION_API_KEY=your_image_api_key_here
+VITE_IMAGE_GENERATION_BASE_URL=https://open.bigmodel.cn/api/paas/v4/images/generations
+VITE_IMAGE_GENERATION_API_KEY=******************
 VITE_IMAGE_GENERATION_MODEL=cogview-3-flash
 ```
 
@@ -156,6 +158,6 @@ src/
 
 -   [Vue.js](https://vuejs.org/) - Progressive JavaScript framework
 -   [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
--   [302.ai](https://302.ai/) - **Official Partner** 🚀 Providing stable and reliable AI API services for this project
+-   [302.AI](https://share.302.AI/DymMSI) - **Official Partner** 🚀 Providing stable and reliable AI API services for this project
 -   [01.AI](https://www.lingyiwanwu.com/) - Recipe generation API
 -   [Zhipu AI](https://open.bigmodel.cn/) - Image generation API
