@@ -25,28 +25,11 @@
 
 ## 🛠️ 技术栈
 
--   **前端框架：** Vue 3.4 + Composition API + TypeScript 5.3+
+-   **前端框架：** Vue 3.4 + TypeScript 5.3+
 -   **样式方案：** Tailwind CSS 3.4+
 -   **构建工具：** Vite 5.0+
--   **AI 服务：** 302.AI
+-   **AI 服务：** OpenAI 标准
 -   **部署平台：** Vercel + Netlify
-
-## ⚡ AI 服务推荐
-
-> 🤖 **本项目 AI 服务提供商**
-
-### 🚀 [302.AI](https://share.302.ai/DymMSI) - 官方合作伙伴
-
-**302.AI** 是一个按用量付费的企业级 AI 资源平台，提供市场上最新、最全面的 AI 模型和 API，以及多种开箱即用的在线 AI 应用。
-
-**为什么选择 302.AI？**
-
--   🤖 **多模型支持** - 支持最新的 AI 大模型
--   💰 **价格优惠** - 按用量付费，成本可控
--   ⚡ **响应快速** - 高性能 API 服务
--   🛡️ **服务稳定** - 企业级可靠性保障
-
-[![访问 302.AI](https://img.shields.io/badge/🚀_访问_302.AI-官方合作伙伴-blue?style=for-the-badge)](https://share.302.ai/DymMSI)
 
 ## 🚀 快速开始
 
@@ -107,9 +90,9 @@ npm run preview
 
 ```env
 # 菜谱生成模型配置（文本生成）
-VITE_TEXT_GENERATION_BASE_URL=https://api.302ai.cn/v1/
+VITE_TEXT_GENERATION_BASE_URL=https://********/v1/
 VITE_TEXT_GENERATION_API_KEY=************
-VITE_TEXT_GENERATION_MODEL=doubao-1.5-pro-32k
+VITE_TEXT_GENERATION_MODEL=******
 VITE_TEXT_GENERATION_TEMPERATURE=0.7
 VITE_TEXT_GENERATION_TIMEOUT=300000
 
@@ -158,8 +141,6 @@ VITE_IMAGE_GENERATION_MODEL=cogview-3-flash
 -   **温度参数** - 控制生成内容的创造性(0-1)
 -   **超时设置** - 自定义 API 请求超时时间
 
-> 💡 **提示**: 访问 `/settings-demo` 查看完整的配置系统演示
-
 ## 📁 项目结构
 
 ```
@@ -171,9 +152,9 @@ src/
 │   ├── GlobalNavigation.vue  # 全局导航
 │   ├── RecipeCard.vue        # 菜谱卡片
 │   ├── NutritionAnalysis.vue # 营养分析
-│   ├── SettingsModal.vue     # 设置弹窗 🆕
-│   ├── SettingsButton.vue    # 设置按钮 🆕
-│   ├── ConfigTest.vue        # 配置测试 🆕
+│   ├── SettingsModal.vue     # 设置弹窗
+│   ├── SettingsButton.vue    # 设置按钮
+│   ├── ConfigTest.vue        # 配置测试
 │   └── ...
 ├── config/              # 配置文件
 │   ├── ai.ts                 # AI 模型配置
@@ -185,34 +166,20 @@ src/
 │   ├── favoriteService.ts    # 收藏服务
 │   ├── imageService.ts       # 图片服务
 │   └── ...
-├── stores/              # 状态管理 🆕
-│   └── settings.js           # 配置状态管理 🆕
+├── stores/              # 状态管理
+│   └── settings.js           # 配置状态管理
 ├── utils/               # 工具函数
-│   ├── apiConfig.js          # API配置工具 🆕
+│   ├── apiConfig.js          # API配置工具
 │   └── ...
 ├── views/               # 页面组件
 │   ├── Home.vue              # 首页
 │   ├── Favorites.vue         # 收藏页
 │   ├── SauceDesign.vue       # 酱汁设计
-│   ├── SettingsDemo.vue      # 配置演示页 🆕
+│   ├── SettingsDemo.vue      # 配置演示页
 │   └── ...
 ├── types/               # TypeScript 类型定义
 └── router/              # 路由配置
 ```
-
-## 🎯 开发指南
-
-### 添加新菜系
-
-1. 在 `src/config/cuisines.ts` 中添加菜系配置
-2. 为菜系大师编写专业的 AI Prompt
-3. 添加对应的图标和描述
-
-### 扩展功能模块
-
-1. 在 `src/views/` 中创建新页面组件
-2. 在 `src/router/` 中添加路由配置
-3. 在导航组件中添加入口
 
 ### AI 服务集成
 
@@ -221,41 +188,12 @@ src/
 -   **配置管理**：`src/stores/settings.js` - 实时配置管理
 -   **API 工具**：`src/utils/apiConfig.js` - 统一配置接口
 
-### 配置系统开发
-
-#### 添加新的配置项
-
-```javascript
-// 在 settings.js 中扩展配置结构
-const defaultSettings = {
-    textGeneration: {
-        // 现有配置...
-        newParam: 'default_value' // 新增配置
-    }
-}
-```
-
-#### 使用动态配置
-
-```javascript
-import { useSettingsStore } from '@/stores/settings'
-import { createTextGenerationRequest } from '@/utils/apiConfig'
-
-// 获取当前配置
-const settingsStore = useSettingsStore()
-const config = settingsStore.getTextGenerationConfig()
-
-// 创建API请求
-const requestConfig = createTextGenerationRequest(messages)
-```
-
 ## 📈 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=liu-ziting/what-to-eat&type=Date)](https://www.star-history.com/#liu-ziting/what-to-eat&Date)
 
 ## 🙏 致谢
 
--   [302.AI](https://share.302.ai/DymMSI) -菜谱生成 API
 -   [智谱 AI](https://open.bigmodel.cn/) - 图片生成 API
 -   [Vue.js](https://vuejs.org/) - 渐进式 JavaScript 框架
 -   [Tailwind CSS](https://tailwindcss.com/) - 实用优先的 CSS 框架

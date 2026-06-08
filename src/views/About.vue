@@ -5,7 +5,7 @@
 
         <div class="max-w-7xl mx-auto space-y-6">
             <!-- API服务商推荐 -->
-            <div class="relative">
+            <div class="relative" v-show="false">
                 <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-t-lg border-2 border-[#0A0910] border-b-0 inline-block mb-0">
                     <span class="font-bold text-lg">🚀 API服务商</span>
                 </div>
@@ -124,7 +124,7 @@
                                     </div>
                                     <div>
                                         <h3 class="text-xl font-bold text-dark-800">liuziting</h3>
-                                        <p class="text-gray-600 text-sm">AI降临派</p>
+                                        <p class="text-gray-600 text-sm">liuziting2014@163.com</p>
                                     </div>
                                 </div>
                                 <p class="text-gray-700 mb-4 text-sm leading-relaxed">
@@ -153,6 +153,21 @@
                                         <div>
                                             <span class="text-sm font-medium text-gray-700">开发工具</span>
                                             <p class="text-gray-600 text-sm">Kiro 编辑器 - AI驱动的全流程开发</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                                            <span class="text-white text-sm font-bold">AI</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-sm font-medium text-gray-700">更多 AI 开发项目</span>
+                                            <a
+                                                href="https://vibecoding.lz-t.top/"
+                                                target="_blank"
+                                                class="block text-blue-600 hover:text-blue-700 underline text-sm transition-colors"
+                                            >
+                                                vibecoding.lz-t.top
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -340,7 +355,7 @@
             </div>
 
             <!-- 友情链接 -->
-            <div class="relative">
+            <div class="relative" v-if="false">
                 <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-t-lg border-2 border-[#0A0910] border-b-0 inline-block mb-0">
                     <span class="font-bold text-lg">🔗 其他项目</span>
                 </div>
